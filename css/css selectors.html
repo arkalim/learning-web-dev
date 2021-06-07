@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <!-- Internal CSS -->
+    <style>
+
+        /* Element Selector */
+        /* This will affect all the paragraphs */
+        p{
+            color: red;
+        }
+        
+        /* ID Selector */
+        /* This will affect only the id blueElement */
+        #blueElement{
+            color:blue;
+        }
+
+        /* Class Selector */
+        /* This will affect only the class greenElement */
+        .greenElement{
+            color:green;
+        }
+
+        /* Class Selector */
+        /* This will affect only the class yellowBackground */
+        .yellowBackground{
+            background-color:yellow;
+        }
+
+        /* Grouping Selector */
+        footer, span{
+            background-color: pink;
+        }
+
+        /* Universal Selector (affects all the elements, until overridden) */
+        * {
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h3>CSS Selectors</h3>
+
+    <p>This is a sample paragraph 1</p>
+    <p>This is a sample paragraph 2</p>
+
+    <!-- An element can have only 1 ID -->
+    <p id="blueElement">This is a sample paragraph 3</p>
+    <p id="blueElement">This is a sample paragraph 4</p>
+
+    <p class="greenElement">This is a sample paragraph 3</p>
+    <p class="greenElement">This is a sample paragraph 4</p>
+
+    <!-- inheriting from multiple classes -->
+    <p class="greenElement yellowBackground">This is a sample paragraph 5</p>
+    <p class="greenElement yellowBackground">This is a sample paragraph 6</p>
+
+    <span>
+        This is span
+    </span>
+
+    <footer>
+        This is footer
+    </footer>
+
+</body>
+</html>

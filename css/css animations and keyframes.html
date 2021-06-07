@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations and Keyframes</title>
+</head>
+
+<style>
+
+    :root{
+        --animation-type: anim-2;
+    }
+
+    .container{
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box{
+        width: 120px;
+        height: 120px;
+        background-color: lightpink;
+
+        /* Initialize Animation */
+        animation-name: var(--animation-type);
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-delay: 1s;
+
+        /* animation-direction:reverse = reverse the animation */
+        animation-direction: normal;
+
+        /* animation-fill-mode:forwards = final state is to{} */
+        /* animation-fill-mode:backwards = final state is from{} */
+        animation-fill-mode: forwards;
+
+        /* animation-timing-function:ease-out = start fast end slow */
+        /* animation-timing-function:ease-in = start slow end fast */
+        /* animation-timing-function:ease-in-out = start slow end slow */
+        animation-timing-function: ease-in-out;
+    }
+
+    /* Run the first animation */
+    @keyframes anim-1{
+        from{
+            width: 120px;
+            height: 120px;
+        }
+        to{
+            width: 320px;
+            height: 320px;
+        }
+    }
+
+    /* Run the second animation */
+    @keyframes anim-2{
+        0%{
+            width: 120px;
+            height: 120px;
+        }
+        25%{
+            background-color: lightsalmon;
+        }
+        50%{
+            background-color: lightcoral;
+        }
+        75%{
+            background-color: orange;
+        }
+        100%{
+            width: 320px;
+            height: 320px;
+            background-color: rgb(255, 115, 0);
+        }
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

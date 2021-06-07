@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        .container{
+            background-color: rgb(223, 243, 250);
+            border: 3px solid darkorchid;
+            border-radius: 10px;
+            width: 500px;
+
+            /* box-sizing: content-box fixes the size of the element box */
+            box-sizing: border-box; /* fixes the size of the border box */
+
+            /* padding:20px; Padding equally in all the directions*/
+            /* padding:20px 30px; Padding in y and x directions*/
+            padding: 0px 30px 0px 30px; /* Top, Right, Bottom, Left */
+
+            margin:20px; /* Margin equally in all the directions*/
+            /* margin:20px 30px; Margin in y and x directions*/
+            /* margin: 0px 30px 0px 30px;  Top, Right, Bottom, Left */
+        }
+
+        body{
+            /* This will be affected in all the elements inside the body */
+            color:darkslateblue;
+            background-color: rgb(253, 242, 221);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>This is the heading</h3>
+        <p id="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime veritatis maiores quia cumque commodi rem itaque temporibus vel voluptate esse expedita fugit ipsam officia eveniet nisi veniam, quas facere reiciendis.</p>
+    </div>
+
+    <div class="container">
+        <h3>This is the heading</h3>
+        <p id="second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime veritatis maiores quia cumque commodi rem itaque temporibus vel voluptate esse expedita fugit ipsam officia eveniet nisi veniam, quas facere reiciendis.</p>
+    </div>
+
+    <div class="container">
+        <h3>This is the heading</h3>
+        <p id="third">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime veritatis maiores quia cumque commodi rem itaque temporibus vel voluptate esse expedita fugit ipsam officia eveniet nisi veniam, quas facere reiciendis.</p>
+    </div>
+</body>
+</html>

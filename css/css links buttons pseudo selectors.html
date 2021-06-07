@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Links Buttons and Pseudo Selectors</title>
+
+    <!-- download the font from the web if it isn't available on the system -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <style>
+
+        .container{
+            background-color: rgb(202, 200, 214);
+            width: 500px;
+            border: 5px solid darkslateblue;
+            border-radius: 15px;
+
+            /* margin: auto;  center the element along x axis */
+            margin: 20px auto;
+        }
+
+        .item{
+            background-color: floralwhite;
+            border: 3px solid darkslategrey;
+            border-radius: 10px;
+            padding: 0px 20px;
+            margin: 15px;
+
+            text-align: justify; /* Justify the text */
+        }
+
+        h3{
+            font-family: 'Dancing Script';
+            text-align: center; /* Center align the Heading */
+        }
+
+        p{
+            font-family: 'Dancing Script', cursive;
+        }
+
+        #heading{
+            text-align: center;
+            font-family: cursive;
+        }
+
+        /* Styling for the btn class */
+        .btn{
+            font-family: 'Segoe UI';
+            font-size: 16px;
+            background-color: lightyellow;
+
+            padding: 5px;
+            margin: 0px 20px 10px 100px;
+
+            border: none;
+            border-radius: 5px;
+
+            cursor: pointer; /* Hand pointer will apprear when hovering */
+        }
+
+        a{
+            color: black; /* Making the link color black */
+            text-decoration: none; /* Remove the underline from the hyperlink */
+        }
+
+        /* Psuedo selector which activates when the user hovers on top of the element of class btn*/
+        .btn:hover{
+            background-color: rgb(255, 255, 181);
+        }
+
+        /* Psuedo selector which activates when the user has visited the link */
+        a:visited{
+            color:purple;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 id="heading">Welcome to ARK Store</h1>
+
+        <div id="fruit" class="item">
+            <h3>Fruits</h3>
+            <p id="fruitpara" class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil numquam expedita sint magnam, officiis modi provident porro enim saepe repellendus itaque. Nam aliquid dolorem quidem reprehenderit. Harum necessitatibus nostrum repudiandae.</p>
+        </div>
+
+        <!-- Link to Read More -->
+        <a href="https://www.youtube.com/" class="btn">Read More</a>
+
+        <!-- Button to Contact Us -->
+        <button class="btn">Contact Us</button>
+
+    </div>
+
+</body>
+</html>

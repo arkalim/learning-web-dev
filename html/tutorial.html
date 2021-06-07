@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head Starts Here -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learning how to code a Website">
+    <meta name="keywords" content="learning, tutorial">
+    <meta name="robots" content="NOINDEX, NOFOLLOW">
+
+    <!-- Include external CSS -->
+    <link rel="stylesheet" href="tutorial.css">
+
+    <!-- Include external Java Script -->
+    <script src="tutorial.js"></script>
+
+    <!-- Title of the Tab -->
+    <title>Tutorial Website</title>
+
+<!-- Head Ends Here -->
+</head>
+
+<!-- Body Starts Here -->
+<body>
+
+    <!-- 6 Heading Sizes -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!-- Body Paragraphs -->
+    <p>Para 1</p>
+    <p>Para 2</p>
+
+    <!-- Strong, Emphasis and line breaks -->
+    <p>This is a sample <strong>paragraph.</strong> You can see that the paragraph is <em>bold</em>. <br> We can even use line breaks.</p>
+
+    <!-- Bold and Italics -->
+    <p>This is <b>bold</b> and this is <i>italics.</i></p>
+
+    <!-- Horizontal Line -->
+    <p>There is a horizontal line below</p>
+    <hr>
+
+    <!-- Links (anchor tags) -->
+    <a href="https://arkalim.github.io">Personal Website</a><br>
+    <a href="https://arkalim.github.io" target="_blank">Personal Website in new tab</a><br>
+
+    <!-- Link to another html page -->
+    <a href="/contacts.html" target="_blank">Contacts in new tab</a><br>
+
+    <h2>Images</h2><hr>
+    <!-- Load images from this folder or online, if not available, alt is displayed-->
+    <img src="raspberry-pi.png" alt="Image not found"><br>
+    <img src="https://source.unsplash.com/random/800x600" alt="Image not found">
+
+
+    <h2>Lists</h2><hr>
+    <!-- Lists -->
+    <!-- Unordered List -->
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <!-- Nesting -->
+        <ul>
+            <li>First Subitem</li>
+            <li>Second Subitem</li>
+        </ul>
+        <li>Third Item</li>
+    </ul>
+
+    <!-- Ordered List -->
+    <ol>
+        <li>First Item</li>
+        <!-- Nesting -->
+        <ol>
+            <li>First Subitem</li>
+            <li>Second Subitem</li>
+        </ol>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ol>
+
+    <h2>Forms</h2><hr>
+    <!-- Form -->
+    <!-- The data entered will be submitted to backend.php -->
+    <form action="backend.php">
+        <!-- div tag allows to group inline elements  -->
+        <div>
+            Name: <input type="text" name="name">
+        </div>
+        <br>
+        <div>
+            Roll: <input type="text" name="roll">
+        </div>
+        <br>
+        <div>
+            Email: <input type="email" name="email">
+        </div>
+        <br>
+        <div>
+            Date: <input type="date" name="date">
+        </div>
+        <br>
+
+        <!-- Number -->
+        <div>
+            Phone Number: <input type="number" name="number">
+        </div>
+        <br>
+
+        <!-- Checkbox -->
+        <div>
+            Eligible: <input type="checkbox" name="eligible">
+        </div>
+        <br>
+
+        <!-- Radio Button -->
+        <div>
+            <!-- since the name of the input tag is the same, only one of these can be selected at a time -->
+            Gender: Male <input type="radio" name="gender"> Female <input type="radio" name="gender"> Other <input type="radio" name="gender">
+        </div>
+        <br>
+
+        <div>
+            <!-- Select Box -->
+            <!-- label is used to associate the text with the form -->
+            <!-- for field must be same as the id of the form -->
+            <label for="occupation">Occupation</label>
+            <select name="job" id="occupation">
+                <option value="none" selected>None</option>
+                <option value="student">Student</option>
+                <option value="engineer">Engineer</option>
+            </select>
+        </div>
+        <br>
+
+        <!-- Text Area -->
+        <div>
+            Write about yourself: <br><textarea name="about" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+
+        <div>
+            <!-- submit button -->
+            Submit: <input type="submit" name="submit_now">
+
+            <!-- Reset Button -->
+            Reset: <input type="reset" value="reset">
+        </div>
+
+    </form>
+
+    <!-- IDs and Classes -->
+    <!-- ID of each element has to be unique -->
+    <!-- An element can belong to multiple classes at the same time. These classes are usually defined in CSS -->
+    <h2>IDs and Classes</h2><hr>
+    <div id="mainbox" class="background blackborder">
+        This is main box.
+    </div>
+
+    <h2>HTML Entities</h2><hr>
+    <!-- HTML Entities -->
+    <!-- This is used to print symbols -->
+    <div class="container">
+        <p>This is another     paragraph with two spaces</p>
+        <p>Paragraph is written like this <p> </p>
+        <p>Pound is written like this £ </p>
+        <p>Copyright is written like this © </p>
+        <p>Another character is  ⇛ </p>
+        <p>Another character is  ¼ </p>
+        <p>Empty character is written like this ​ </p>
+    </div>
+
+    <!-- Semantic Tags -->
+    
+
+<!-- Body Ends Here -->
+</body>
+
+</html>

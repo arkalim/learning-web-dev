@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS before and after pseudo selectors</title>
+</head>
+
+<style>
+
+    body{
+        color: white;
+        background-color: black;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    section{
+        height: 300px;
+        margin: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navigation{
+        display: flex;
+    }
+
+    li{
+        list-style: none;
+        padding: 20px 20px;
+    }
+
+    /* before pseudo selector to insert content before section content before */
+    section::before{
+        content: "This content is inserted before section"
+    }
+
+    /* before pseudo selector to insert content before section content before */
+    section::after{
+        content: "This content is inserted after section"
+    }
+
+    /* Using before pseudo selector to reduce the opacity of a background image */
+    /* works with after pseudo selector as well */
+    header::before{
+        background: url("https://source.unsplash.com/user/erondu/1600x900") no-repeat center center/cover;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+    }
+
+</style>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>This is a tutorial</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nam sed, iste perspiciatis aliquam magni obcaecati suscipit aut expedita eaque</p>
+    </section>
+</body>
+</html>

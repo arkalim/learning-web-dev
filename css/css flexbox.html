@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+</head>
+
+<style>
+    .container{
+        width: 100%;
+        height: 500px;
+        border: 2px solid black;
+
+        /* Initialize the container as flexbox
+        All the items in the flex box will automatically become flex items */
+        display: flex;
+
+        /* ----- Flex Properties for flex container ----- */
+
+        flex-direction: row; /* default value */
+        /* flex-direction: column; 
+        flex-direction: row-reverse; 
+        flex-direction: column-reverse;  */
+
+        /* wrap the flex items (default value is flex-wrap: nowrap) */
+        /* flex-wrap:wrap; */
+        /* flex-wrap:wrap-reverse; */
+
+        /* Shorthand to specify both flex-direction and flex-wrap in a single line */
+        flex-flow: row wrap;
+
+        /* arrange the flex items in the x-axis */
+        justify-content: start;    /* default value */
+        justify-content: center;
+        justify-content: space-between;
+        justify-content: space-evenly;
+        justify-content: space-around;
+
+        /* align items along y-axis */
+        align-items: center;      /* align at the center of the flex container */
+        align-items: flex-start;  /* align at the top of the flex container */
+        align-items: flex-end;    /* align at the bottom of the flex container */
+        align-items: stretch;     /* align at the top but evenly space the content when width is reduced */
+    }
+
+    .item{
+        width: 120px;
+        height: 120px;
+        margin: 5px;
+        border: 2px solid lightslategray;
+        background-color: lightpink;
+    }
+
+    #item-1{
+        /* ----- Flex Properties for flex item ----- */
+
+        /* higher the order, later it shows in the container */
+        /* by default, all the flex items have a order of 0 */
+        order: 2;
+
+        /* grow the items in proportion to the ratio */
+        /* flex-grow: 2; */
+
+        /* shrink the items in proportion to the ratio */
+        /* flex-shrink: 2; */
+
+        /* change the dimension of the flex item */
+        /* when flex-direction:row flex basis controls the width of the flex item */
+        /* when flex-direction:column flex basis controls the height of the flex item */
+        /* flex-basis: 200px; */
+
+        /* shorthand to specify flex-grow, flex-shrink and flex-basis */
+        /* flex: 2 2 200px; */
+
+        /* align flex item vertically */
+        align-self: flex-start;
+        align-self: center;
+        align-self: flex-end;
+    }
+
+    #item-2{
+        order: 1;
+        /* flex-grow: 3; */
+        /* flex-shrink: 3; */
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="item" id="item-1">Box 1</div>
+        <div class="item" id="item-2">Box 2</div>
+        <div class="item" id="item-3">Box 3</div>
+        <div class="item" id="item-4">Box 4</div>
+        <div class="item" id="item-5">Box 5</div>
+        <div class="item" id="item-6">Box 6</div>
+        <div class="item" id="item-7">Box 7</div>
+        <div class="item" id="item-8">Box 8</div>
+    </div>
+</body>
+</html>

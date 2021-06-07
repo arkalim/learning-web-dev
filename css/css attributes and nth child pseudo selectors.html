@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes and nth child pseudo selectors</title>
+</head>
+
+<style>
+    .container {
+        display: block;
+        width: 150px;
+        margin: auto;
+    }
+
+    input {
+        display: block;
+    }
+
+    /* ----- Attribute pseudo selector ----- */
+
+    /* Select only those input where type is text */
+    input[type="text"] {
+        background-color: lightyellow;
+    }
+
+    /* Select only those anchors where target is set */
+    a[target] {
+        background-color: lightpink;
+    }
+
+    /* ----- nth child pseudo selector ----- */
+
+    /* Select only the third child */
+    li:nth-child(3) {
+        color: red;
+    }
+
+    /* Select every second child (n: 0,1,2,..) */
+    li:nth-child(2n+0) {
+        color: blue;
+    }
+
+    /* Select every odd child */
+    li:nth-child(odd) {
+        background-color: lightseagreen;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="Submit">
+        </form>
+        <ul>
+            <li class="item" id="item-1">Item 1</li>
+            <li class="item" id="item-2">Item 2</li>
+            <li class="item" id="item-3">Item 3</li>
+            <li class="item" id="item-4">Item 4</li>
+        </ul>
+        <a href="http://google.com" target="_blank">Go to google</a>
+    </div>
+</body>
+
+</html>

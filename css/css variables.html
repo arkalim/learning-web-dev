@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables and Custom Properties</title>
+</head>
+
+<style>
+    .container{
+        display: flex;
+    }
+
+    :root{
+
+        /* Global variables */
+        --primary-color: lightblue;
+        --secondary-color: lightpink;
+        --max-w: 120px
+    }
+
+    .box{
+        width: var(--max-w);
+        height: var(--max-w);
+        margin: 10px 10px;
+
+        /* Defining a local variable */
+        /* It's scope is .box{} block */
+        /* We can change the variable at one place and the change will take effect everywhere inside its scope*/
+        --box-color: lightgreen;
+
+        /* using the variable */
+        background-color: var(--box-color);
+        border: 2px solid black;
+        box-shadow: 5px 5px 3px var(--secondary-color);
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

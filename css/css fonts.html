@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts</title>
+
+    <!-- download the font from the web if it isn't available on the system -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h3>CSS Fonts</h3>
+
+    <style>
+        #font1{
+            /* Font Stack (from left to right) */
+            font-family: Georgia, 'Times New Roman', Times, serif
+        }
+        #font2{
+            font-family: 'Dancing Script', cursive;
+            font-size: 53px; /* 1 px = 1/96 inch */
+            line-height: 1.1em; /* = 1.1 * font-size(53) */
+            font-weight: normal;
+        }
+        span{
+            font-weight: bold;
+            font-style:italic;
+        }
+    </style>
+
+    <p id="font1">Let's play with CSS <span>fonts</span></p>
+    <p id="font2">Let's play with CSS Fonts</p>
+    
+</body>
+</html>

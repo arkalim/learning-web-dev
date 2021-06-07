@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Units for responsive site</title>
+</head>
+
+<style>
+    html {
+        font-size: 20px;
+    }
+
+    .container {
+        border: 2px solid green;
+        font-size: 10px;
+        padding: 9px;
+
+        /* vh (viewport height) refers to the full viewable vertical height*/
+        /* 90vh = 90% of vh */
+        height: 93vh;
+
+        /* vw (viewport width) refers to the full viewable horizontal width*/
+        width: 97vw;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #heading-1 {
+        /* em refers to the parent element */
+        /* em is used when we want the children element to resize when parent is resized */
+        font-size: 3em;
+
+        /* Here, it will take 2 x font-size(30) = 60px */
+        padding: 2em;
+    }
+
+    #heading-2 {
+        /* rem refers to the root (html) element */
+        /* rem always works relative to the font size in the html tag */
+        /* rem is used to scale the font size based on the default font size of the browser */
+        font-size: 3rem;
+
+        /* Here, it will take 2 x html font-size (20) = 40px */
+        padding: 2rem;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 id="heading-1">This is first heading</h1>
+        <h1 id="heading-2">This is second heading</h1>
+        <h1 id="heading-3">This is third heading</h1>
+    </div>
+</body>
+
+</html>

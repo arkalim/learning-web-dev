@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Selectors</title>
+</head>
+
+<style>
+
+    /* Select all the paras inside div */
+    div p{
+        background-color: lightgoldenrodyellow;
+    } 
+
+    /* Select only those paras that are immediate child of div */
+    div > p{
+        background-color: lightseagreen;
+    }
+
+    /* Select only those paras that have div as their previous sibling */
+    div + p{
+        background-color: lightsalmon;
+    }
+
+</style>
+
+<body>
+    <p>This is para is outside and before all div</p>
+    <div class="container">
+        <div class="row">
+            <p>This is the para inside div</p>
+
+            <ul>
+                <li class="item"><p>This para is inside li</p></li>
+                <li>This is a text inside li</li>
+                <p>This is a para inside ul</p>
+            </ul>
+
+        </div>
+        <p>This para is inside outermost div</p>
+    </div>
+    <p>This is para is outside and after all div</p>
+</body>
+</html>

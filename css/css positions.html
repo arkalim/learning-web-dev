@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions</title>
+
+    <style>
+        .container{
+            border: 2px solid green;
+            background-color: seashell;
+            height: 5000px;
+        }
+
+        .box {
+            height: 120px;
+            width: 120px;
+
+            margin: 2px;
+            border: 2px solid purple;
+
+            display: inline-block;
+        }
+
+        /* CSS Positions: static (default), relative, absolute, fixed, sticky */
+
+        #box1 {
+            /* Original Position */
+            position: static; 
+        }
+
+        #box2 {
+            /* Position relative to the original position of the element and leaves a gap at it's original location */
+            position: relative;
+            top: 10px;
+            left: 15px;
+        }
+
+        #box3 {
+            /* Position relative to the position of its first parent (container here) and does not leave a gap at its original location */
+            position: absolute;
+            top: 50px;
+            left: 95px;
+        }
+
+        #box4 {
+            /* Position relative to the browser window and does not leave a gap at its original location. Position remains fixed on the screen when scrolling */
+            position: fixed;
+            top: 95px;
+            right: 95px;
+        }
+
+        #box5 {
+            /* Position on the x axis is fixed. Sticks to the screen position when scrolling and leaves a gap at its original location (used for sticky menu) */
+            position: sticky;
+            top: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">Static</div>
+        <div class="box" id="box2">Relative</div>
+        <div class="box" id="box3">Absolute</div>
+        <div class="box" id="box4">Fixed</div>
+        <div class="box" id="box5">Sticky</div>
+    </div>
+</body>
+
+</html>

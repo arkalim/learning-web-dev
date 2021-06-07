@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+</head>
+
+<style>
+    .box{
+        font-size: 80px;
+        text-align: center;
+        background-color: rgb(255, 203, 182);
+        color: black;
+
+        /* Nothing will be displayed initially */
+        display:none;
+    }
+
+    /* Media Query helps to inject additional CSS conditionally. It is used in responsive websites */
+    /* When the max-width is 700px, fire the CSS given in the braces */
+    @media (max-width: 700px){
+        #box-1{
+            display: block; 
+            background-color: lightsteelblue;
+        }
+    }
+
+    @media (min-width: 700px) and (max-width: 1700px){
+        #box-2{
+            display: block; 
+            background-color: lightyellow;
+        }
+    }
+
+    @media (min-width: 1700px) and (max-width: 2700px){
+        #box-3{
+            display: block; 
+            background-color: lightpink;
+        }
+    }
+
+    @media (min-width: 2700px){
+        #box-4{
+            display: block; 
+            background-color: lightgreen;
+        }
+    }
+
+    /* we can write only screen to avoid other media types from firing the media query */
+    /* @media only screen and (min-width: 2700px) */
+
+</style>
+
+<body>
+    <div class="box" id="box-1">I am an iPhone</div>
+    <div class="box" id="box-2">I am a tablet</div>
+    <div class="box" id="box-3">I am a computer</div>
+    <div class="box" id="box-4">I am a widescreen computer</div>
+</body>
+</html>
