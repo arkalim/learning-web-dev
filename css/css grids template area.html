@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grids Template Area</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+
+            /* layout */
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'aside section section section'
+            'footer footer footer footer';
+        }
+
+        .item {
+            background-color: lightpink;
+            border: 2px solid rgb(255, 144, 161);
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        #navbar {
+            grid-area: navbar;
+            height: 10vh;
+        }
+
+        #section {
+            grid-area: section;
+            height: 60vh;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+
+        #footer {
+            grid-area: footer;
+            height: 10vh;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="navbar" class="item">Navbar</div>
+        <div id="section" class="item">Section</div>
+        <div id="aside" class="item">Aside</div>
+        <div id="footer" class="item">Footer</div>
+    </div>
+</body>
+</html>
