@@ -1,2 +1,10 @@
 express/node_modules
 node/node_modules
+
+react/react-intro/node_modules
+react/react-http/node_modules
+react/react-hooks/node_modules
+react/react-router-dom/node_modules
+
+redux/node_modules
+redux/react-redux-demo/node_modules
