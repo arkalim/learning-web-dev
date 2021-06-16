@@ -1,6 +1,7 @@
 import "./App.css";
-import Cake from "./components/Cake";
 import store from "./redux/store";
+import CakeHooks from "./components/CakeHooks";
+import BiscuitHooks from "./components/BiscuitHooks";
 
 // required to provide the store to the React application
 import { Provider } from "react-redux";
@@ -11,7 +12,8 @@ function App() {
         // the store can be accessed anywhere in the entire component tree
         <Provider store={store}>
             <div className="App">
-                <Cake />
+                <CakeHooks />
+                <BiscuitHooks />
             </div>
         </Provider>
     );
