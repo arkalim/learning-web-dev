@@ -8,3 +8,7 @@ react/react-router-dom/node_modules
 
 redux/node_modules
 redux/react-redux-demo/node_modules
+
+typescript/webpack-package/node_modules
+
+typescript/libraries/node_modules
